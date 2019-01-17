@@ -39,8 +39,7 @@ $ bundle console
 ```
 
 ```ruby
-  params = {endpoint_url: 'your_endpoint_url', api_token: 'your_api_token'}
-  client = BlockchairClient.new(params).private
+  client = BlockchairClient.new({currency: 'LTC'}).private
 ```
 
 Where `params` is , the hash of the possible environment variables.
@@ -50,226 +49,226 @@ Where `params` is , the hash of the possible environment variables.
 #### Address ([docs](https://github.com/Blockchair/Blockchair.Support/blob/master/API_DOCUMENTATION_EN.md))
 
 ```ruby
-  client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg')
+  client.address(CRYPTO_ADDRESS)
 ```
 
 ##### Address Transactions
 
 ```ruby
-  client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').transactions
+  client.address(CRYPTO_ADDRESS).transactions
 ```
 
 ##### Address Type
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').type
+client.address(CRYPTO_ADDRESS).type
 ```
 ##### Address Script_hex
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').script_hex
+client.address(CRYPTO_ADDRESS).script_hex
 ```
 ##### Address Balance
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').balance
+client.address(CRYPTO_ADDRESS).balance
 ```
 ##### Address Balance_usd
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').balance_usd
+client.address(CRYPTO_ADDRESS).balance_usd
 ```
 ##### Address Received
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').received
+client.address(CRYPTO_ADDRESS).received
 ```
 ##### Address Received_usd
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').received_usd
+client.address(CRYPTO_ADDRESS).received_usd
 ```
 ##### Address Spent
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').spent
+client.address(CRYPTO_ADDRESS).spent
 ```
 ##### Address Spent_usd
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').spent_usd
+client.address(CRYPTO_ADDRESS).spent_usd
 ```
 ##### Address Output_count
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').output_count
+client.address(CRYPTO_ADDRESS).output_count
 ```
 ##### Address Unspent_output_count
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').unspent_output_count
+client.address(CRYPTO_ADDRESS).unspent_output_count
 ```
 ##### Address First_seen_receiving
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').first_seen_receiving
+client.address(CRYPTO_ADDRESS).first_seen_receiving
 ```
 ##### Address Last_seen_receiving
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').last_seen_receiving
+client.address(CRYPTO_ADDRESS).last_seen_receiving
 ```
 ##### Address First_seen_spending
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').first_seen_spending
+client.address(CRYPTO_ADDRESS).first_seen_spending
 ```
 ##### Address Last_seen_spending
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').last_seen_spending
+client.address(CRYPTO_ADDRESS).last_seen_spending
 ```
 ##### Address Transaction_count
 
 ```ruby
-client.address('ltc1q80nqd53dpl9s0ytgdamwzu8ghtyr0ktespxgpg').transaction_count
+client.address(CRYPTO_ADDRESS).transaction_count
 ```
 
 #### Transaction ([docs](https://github.com/Blockchair/Blockchair.Support/blob/master/API_DOCUMENTATION_EN.md))
 
 ```ruby
-  client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7')
+  client.transaction(CRYPTO_TX)
 ```
 
 ##### Transaction Inputs
 
 ```ruby
-  client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').inputs
+  client.transaction(CRYPTO_TX).inputs
 ```
 
 ##### Transaction Outputs
 
 ```ruby
-  client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').outputs
+  client.transaction(CRYPTO_TX).outputs
 ```
 
 ##### Transaction Block_id
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').block_id
+client.transaction(CRYPTO_TX).block_id
 ```
 ##### Transaction Id
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').id
+client.transaction(CRYPTO_TX).id
 ```
 ##### Transaction Hash
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').hash
+client.transaction(CRYPTO_TX).hash
 ```
 ##### Transaction Date
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').date
+client.transaction(CRYPTO_TX).date
 ```
 ##### Transaction Time
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').time
+client.transaction(CRYPTO_TX).time
 ```
 ##### Transaction Size
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').size
+client.transaction(CRYPTO_TX).size
 ```
 ##### Transaction Weight
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').weight
+client.transaction(CRYPTO_TX).weight
 ```
 ##### Transaction Version
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').version
+client.transaction(CRYPTO_TX).version
 ```
 ##### Transaction Lock_time
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').lock_time
+client.transaction(CRYPTO_TX).lock_time
 ```
 ##### Transaction Is_coinbase
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').is_coinbase
+client.transaction(CRYPTO_TX).is_coinbase
 ```
 ##### Transaction Has_witness
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').has_witness
+client.transaction(CRYPTO_TX).has_witness
 ```
 ##### Transaction Input_count
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').input_count
+client.transaction(CRYPTO_TX).input_count
 ```
 ##### Transaction Output_count
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').output_count
+client.transaction(CRYPTO_TX).output_count
 ```
 ##### Transaction Input_total
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').input_total
+client.transaction(CRYPTO_TX).input_total
 ```
 ##### Transaction Input_total_usd
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').input_total_usd
+client.transaction(CRYPTO_TX).input_total_usd
 ```
 ##### Transaction Output_total
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').output_total
+client.transaction(CRYPTO_TX).output_total
 ```
 ##### Transaction Output_total_usd
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').output_total_usd
+client.transaction(CRYPTO_TX).output_total_usd
 ```
 ##### Transaction Fee
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').fee
+client.transaction(CRYPTO_TX).fee
 ```
 ##### Transaction Fee_usd
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').fee_usd
+client.transaction(CRYPTO_TX).fee_usd
 ```
 ##### Transaction Fee_per_kb
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').fee_per_kb
+client.transaction(CRYPTO_TX).fee_per_kb
 ```
 ##### Transaction Fee_per_kb_usd
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').fee_per_kb_usd
+client.transaction(CRYPTO_TX).fee_per_kb_usd
 ```
 ##### Transaction Fee_per_kwu
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').fee_per_kwu
+client.transaction(CRYPTO_TX).fee_per_kwu
 ```
 ##### Transaction Fee_per_kwu_usd
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').fee_per_kwu_usd
+client.transaction(CRYPTO_TX).fee_per_kwu_usd
 ```
 ##### Transaction Cdd_total
 
 ```ruby
-client.transaction('f40ac4440a6d989fdaae01701885446905380aa2d233ffeba1934c59dd4168a7').cdd_total
+client.transaction(CRYPTO_TX).cdd_total
 ```

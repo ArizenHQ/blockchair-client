@@ -22,10 +22,10 @@ module BlockchairClient
 
   class Configuration
 
-    attr_accessor :endpoint_url
+    attr_accessor :endpoint_url, :currency
 
     def set_compulsory_options
-      @endpoint_url ||= ENV.fetch('Blockchair_ENDPOINT_URL')
+      @endpoint_url = 'https://api.blockchair.com/litecoin/dashboards/'
     rescue ::KeyError
       fail MissingEndpointUrl
     end

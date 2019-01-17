@@ -4,14 +4,12 @@ describe 'Configuration' do
 
   let(:config) { BlockchairClient.config }
 
-  let(:default_params) {{ endpoint_url: 'https://sandbox.blockchair.net', api_token: 'abcd' }}
+  let(:default_params) {{ currency: 'LTC' }}
 
-  it 'Passes correct parameters' do
-    application = BlockchairClient::Application.new(default_params)
+  subject { BlockchairClient::Application.new(default_params)  }
 
-    default_params.each do |param|
-      expect(application.config.send(param.first)).to eq(param.last)
-    end
+  context 'Passes correct parameters' do
+    expect(application.config.currency).to eq('LTC')
   end
 
   it 'has a version number' do
