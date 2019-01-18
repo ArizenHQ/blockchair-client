@@ -29,16 +29,9 @@ end
 You can also pass any of those options inline when loading an instance of BlockchairClient.
 
 ```ruby
-  BlockchairClient.new({currency: 'LTC'})
+  client = BlockchairClient.new({currency: 'LTC'})
 ```
 
-## Usage
-
-```ruby
-  client = BlockchairClient.new({currency: 'LTC'}).private
-```
-
-Where `params` is , the hash of the possible environment variables.
 
 ### List of endpoints :
 
