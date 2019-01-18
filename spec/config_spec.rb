@@ -4,12 +4,12 @@ describe 'Configuration' do
 
   let(:config) { BlockchairClient.config }
 
-  let(:default_params) {{ currency: 'LTC' }}
+  let(:params) {{ currency: 'LTC' }}
 
-  subject { BlockchairClient::Application.new(default_params)  }
+  subject { BlockchairClient::Application.new(params)  }
 
-  context 'Passes correct parameters' do
-    expect(application.config.currency).to eq('LTC')
+  it 'Passes correct parameters' do
+    expect(subject.config.currency).to eq('LTC')
   end
 
   it 'has a version number' do

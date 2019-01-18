@@ -34,10 +34,6 @@ You can also pass any of those options inline when loading an instance of Blockc
 
 ## Usage
 
-```bash
-$ bundle console
-```
-
 ```ruby
   client = BlockchairClient.new({currency: 'LTC'}).private
 ```
@@ -49,7 +45,7 @@ Where `params` is , the hash of the possible environment variables.
 #### Address ([docs](https://github.com/Blockchair/Blockchair.Support/blob/master/API_DOCUMENTATION_EN.md))
 
 ```ruby
-  client.address(CRYPTO_ADDRESS)
+  client.address(CRYPTO_ADDRESS).query
 ```
 
 ##### Address Transactions
@@ -137,7 +133,7 @@ client.address(CRYPTO_ADDRESS).transaction_count
 #### Transaction ([docs](https://github.com/Blockchair/Blockchair.Support/blob/master/API_DOCUMENTATION_EN.md))
 
 ```ruby
-  client.transaction(CRYPTO_TX)
+  client.transaction(CRYPTO_TX).query
 ```
 
 ##### Transaction Inputs

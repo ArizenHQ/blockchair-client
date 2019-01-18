@@ -5,18 +5,18 @@ module BlockchairClient
       set_options(options)
     end
 
-    def public
-      @post   ||= BlockchairClient::Requests::Public.new(config)
+    def transaction(tx_id)
+      @transaction  ||= ::BlockchairClient::Endpoints::Transaction.new(config, tx_id)
     end
 
-    def private
-      @post   ||= BlockchairClient::Requests::Private.new(config)
+    def address(address)
+      @address ||= ::BlockchairClient::Endpoints::Address.new(config, address)
     end
 
     def config
       @config ||= ::BlockchairClient.config.dup
     end
-
+      
     private
 
     def set_options(options)

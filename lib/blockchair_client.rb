@@ -1,5 +1,6 @@
 require 'httparty'
 require 'active_support/inflector'
+require './lib/blockchair_client/endpoints/base' # need to be load before all blockchairclient/endpoints/*.rb
 
 ruby_project_files = Dir[File.join(File.dirname(__FILE__), '**', '*.rb')]
 
