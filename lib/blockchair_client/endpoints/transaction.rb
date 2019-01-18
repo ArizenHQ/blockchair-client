@@ -12,6 +12,14 @@ module BlockchairClient
       def hash
         attributes[:hash]
       end
+
+      def inputs
+        query['data'][param]['inputs']
+      end
+
+      def outputs
+        query['data'][param]['outputs']
+      end
     end
   end
 end

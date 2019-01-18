@@ -22,7 +22,7 @@ module BlockchairClient
 
       def method_missing(method, *args, &block)
         attributes.send(method, *args, &block)
-      end    
+      end
     end
   end
 end

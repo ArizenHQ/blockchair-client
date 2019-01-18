@@ -8,6 +8,10 @@ module BlockchairClient
       def attributes
         @attributes ||= OpenStruct.new(query['data'][param]['address'])
       end
+
+      def transactions
+        query['data'][param]['transactions']
+      end
     end
   end
 end
