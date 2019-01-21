@@ -20,6 +20,10 @@ module BlockchairClient
       def outputs
         query['data'][param]['outputs']
       end
+
+      def confirmations
+        (query['context']['state'].to_i - attributes.block_id.to_i)
+      end
     end
   end
 end

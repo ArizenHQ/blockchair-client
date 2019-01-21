@@ -129,6 +129,12 @@ client.address(CRYPTO_ADDRESS).transaction_count
   client.transaction(CRYPTO_TX).query
 ```
 
+### Transaction confirmations
+
+```ruby
+  client.transaction(CRYPTO_TX).confirmations
+```
+
 ##### Transaction Inputs
 
 ```ruby

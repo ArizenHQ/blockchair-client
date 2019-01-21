@@ -6,11 +6,11 @@ module BlockchairClient
     end
 
     def transaction(tx_id)
-      @transaction  ||= ::BlockchairClient::Endpoints::Transaction.new(config, tx_id)
+      @transaction = ::BlockchairClient::Endpoints::Transaction.new(config, tx_id)
     end
 
     def address(address)
-      @address ||= ::BlockchairClient::Endpoints::Address.new(config, address)
+      @address = ::BlockchairClient::Endpoints::Address.new(config, address)
     end
 
     def config
