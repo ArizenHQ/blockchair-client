@@ -13,15 +13,15 @@ module BlockchairClient
         attributes[:hash]
       end
 
-      def inputs
+      def inputs(*)
         query['data'][param]['inputs']
       end
 
-      def outputs
+      def outputs(*)
         query['data'][param]['outputs']
       end
 
-      def confirmations
+      def confirmations(*)
         (query['context']['state'].to_i - attributes.block_id.to_i)
       end
     end
