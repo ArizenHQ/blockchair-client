@@ -278,14 +278,14 @@ client.transactions(CRYPTO_TX1, CRYPTO_TX2).query
 ##### First Transaction Hash
 
 ```ruby
-client.transaction(CRYPTO_TX)[0].tx_hash
+client.transactions(CRYPTO_TX1, CRYPTO_TX2)[CRYPTO_TX1].tx_hash
 ```
 
 
 ##### Second Transaction Hash
 
 ```ruby
-client.transaction(CRYPTO_TX)[1].tx_hash
+client.transactions(CRYPTO_TX, CRYPTO_TX2)[CRYPTO_TX2].tx_hash
 ```
 
 The behaviour is the same as for `Transaction` for the rest of the cases.
