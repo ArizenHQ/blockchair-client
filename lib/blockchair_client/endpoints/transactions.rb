@@ -9,16 +9,16 @@ module BlockchairClient
         @attributes ||= RecursiveOpenStruct.new(reconstructed_transactions, recurse_over_arrays: true)
       end
 
-      def inputs(index)
-        query['data'][param]['inputs']
+      def inputs(tx_hash)
+        query['data'][tx_hash]['inputs']
       end
 
-      def outputs(index)
-        query['data'][param]['outputs']
+      def outputs(tx_hash)
+        query['data'][tx_hash]['outputs']
       end
 
-      def confirmations(index)
-        (query['context']['state'].to_i - attributes(index).block_id.to_i)
+      def confirmations(tx_hash)
+        (query['context']['state'].to_i - attributes[tx_hash].block_id.to_i) + 1
       end
 
       def reconstructed_transactions

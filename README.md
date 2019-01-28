@@ -289,3 +289,23 @@ client.transactions(CRYPTO_TX, CRYPTO_TX2)[CRYPTO_TX2].tx_hash
 ```
 
 The behaviour is the same as for `Transaction` for the rest of the cases.
+
+##### First Transaction Inputs
+
+```ruby
+client.transactions(CRYPTO_TX1, CRYPTO_TX2).inputs[CRYPTO_TX1]
+```
+
+
+##### First Transaction Outputs
+
+```ruby
+client.transactions(CRYPTO_TX1, CRYPTO_TX2).outputs[CRYPTO_TX1]
+```
+
+
+##### First Transaction Confirmations
+
+```ruby
+client.transactions(CRYPTO_TX1, CRYPTO_TX2).confirmations[CRYPTO_TX1]
+```
