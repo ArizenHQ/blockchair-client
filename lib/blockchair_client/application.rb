@@ -9,6 +9,10 @@ module BlockchairClient
       @transaction = ::BlockchairClient::Endpoints::Transaction.new(config, tx_id)
     end
 
+    def transactions(*tx_ids)
+      @transaction = ::BlockchairClient::Endpoints::Transactions.new(config, tx_ids)
+    end
+
     def address(address)
       @address = ::BlockchairClient::Endpoints::Address.new(config, address)
     end

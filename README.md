@@ -35,7 +35,7 @@ You can also pass any of those options inline when loading an instance of Blockc
 
 ### List of endpoints :
 
-#### Address ([docs](https://github.com/Blockchair/Blockchair.Support/blob/master/API_DOCUMENTATION_EN.md))
+### Address ([docs](https://github.com/Blockchair/Blockchair.Support/blob/master/API_DOCUMENTATION_EN.md))
 
 ```ruby
   client.address(CRYPTO_ADDRESS).query
@@ -123,13 +123,13 @@ client.address(CRYPTO_ADDRESS).last_seen_spending
 client.address(CRYPTO_ADDRESS).transaction_count
 ```
 
-#### Transaction ([docs](https://github.com/Blockchair/Blockchair.Support/blob/master/API_DOCUMENTATION_EN.md))
+### Transaction ([docs](https://github.com/Blockchair/Blockchair.Support/blob/master/API_DOCUMENTATION_EN.md))
 
 ```ruby
   client.transaction(CRYPTO_TX).query
 ```
 
-### Transaction confirmations
+##### Transaction confirmations
 
 ```ruby
   client.transaction(CRYPTO_TX).confirmations
@@ -267,3 +267,25 @@ client.transaction(CRYPTO_TX).fee_per_kwu_usd
 ```ruby
 client.transaction(CRYPTO_TX).cdd_total
 ```
+
+### Transactions ([docs](https://github.com/Blockchair/Blockchair.Support/blob/master/API_DOCUMENTATION_EN.md))
+
+
+```ruby
+client.transactions(CRYPTO_TX1, CRYPTO_TX2).query
+```
+
+##### First Transaction Hash
+
+```ruby
+client.transaction(CRYPTO_TX)[0].tx_hash
+```
+
+
+##### Second Transaction Hash
+
+```ruby
+client.transaction(CRYPTO_TX)[1].tx_hash
+```
+
+The behaviour is the same as for `Transaction` for the rest of the cases.
