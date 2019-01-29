@@ -1,4 +1,3 @@
-require 'pry'
 module BlockchairClient
   module Request
     class Public
